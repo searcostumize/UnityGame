@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Mijn Unity Game</title>
+  <style>
+    body { margin: 0; background: #000; }
+    #unityContainer { width: 960px; height: 600px; margin: auto; display: block; }
+  </style>
+</head>
+<body>
+  <div id="unityContainer"></div>
+  <script>
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/Build.loader.js";
+    var config = {
+      dataUrl: buildUrl + "/Build.data",
+      frameworkUrl: buildUrl + "/Build.framework.js",
+      codeUrl: buildUrl + "/Build.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Jouw Bedrijf",
+      productName: "Mijn Unity Game",
+      productVersion: "1.0"
+    };
+    var container = document.querySelector("#unityContainer");
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(container, config, (progress) => {}).then((unityInstance) => {
+        console.log("Unity instance loaded");
+      }).catch((message) => {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>
