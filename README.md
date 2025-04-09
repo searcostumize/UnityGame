@@ -6,7 +6,7 @@ Dit is een 3D Unity-game die geüpload is naar GitHub Pages. Je kunt de game spe
 
 Klik op de onderstaande link om de game te spelen:
 
-[Speel de game in je browser](https://jouwgebruikersnaam.github.io/unity-webgl-game/)
+[(https://jouwgebruikersnaam.github.io/unity-webgl-game/](https://searcostumize.github.io/UnityGame/))
 
 ## Beschrijving
 
